@@ -38,6 +38,8 @@ body {
 }
 
 .blog-item .tag {
+  display: flex;
+  align-items: center;
   color: #0027d5;
   font-size: 24px;
   font-weight: 500;
@@ -46,6 +48,16 @@ body {
 .blog-item .tag a {
   text-decoration: none;
   margin-right: 5px;
+}
+
+.blog-item .tag a.popular-tag {
+  display: inline-block;
+  background-color: #0027d5;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .blog-item h3 {
