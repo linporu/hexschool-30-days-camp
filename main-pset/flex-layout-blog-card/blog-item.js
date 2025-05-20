@@ -61,26 +61,19 @@ const blogData = [
   },
 ];
 
-// 動態生成部落格卡片
 document.addEventListener("DOMContentLoaded", function () {
   const blogList = document.querySelector(".blog-list");
 
-  // 清空現有內容
-  blogList.innerHTML = "";
-
-  // 使用遍歷陣列方式生成所有卡片
   blogData.forEach((blog) => {
-    // 創建標籤 HTML
     const tagsHtml = blog.tags.map((tag) => `<a href="#">${tag}</a>`).join("");
-    
-    // 檢查是否為熱門文章，如果是則添加「人氣文章」標籤
-    const popularTagHtml = blog.isPopular ? `<a href="#" class="popular-tag">人氣文章</a>` : '';
 
-    // 創建一個新的 li 元素
+    const popularTagHtml = blog.isPopular
+      ? `<a href="#" class="popular-tag">人氣文章</a>`
+      : "";
+
     const blogItem = document.createElement("li");
     blogItem.className = "blog-item";
 
-    // 設置卡片 HTML 內容
     blogItem.innerHTML = `
       <img src="${blog.image}" alt="${blog.title}" loading="lazy" />
       <p>${blog.date}</p>
@@ -93,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="btn"><a href="">閱讀內文</a></div>
     `;
 
-    // 將卡片添加到清單中
     blogList.appendChild(blogItem);
   });
 });

@@ -2,10 +2,6 @@ body {
   font-family: "noto sans tc";
 }
 
-/* * {
-  outline: auto;
-} */
-
 .wrap {
   display: flex;
   justify-content: center;
@@ -15,6 +11,7 @@ body {
   max-width: 1280px;
   display: flex;
   justify-content: center;
+  margin: 0 10px;
 }
 
 .blog-list {
@@ -28,6 +25,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 40px;
+}
+
+/* 避免人氣文章破版 */
+@media (max-width: 1106px) {
+  .blog-item {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-item {
+    width: 100%;
+  }
 }
 
 .blog-item img {
