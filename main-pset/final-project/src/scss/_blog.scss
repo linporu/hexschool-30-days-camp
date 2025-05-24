@@ -1,0 +1,88 @@
+// ===== 部落格項目元件 =====
+@use "variables" as *;
+
+.blog-item {
+  width: 32%;
+  font-size: $base-font-size;
+  line-height: $line-height;
+  margin-bottom: 40px;
+
+  // 響應式設計 - 避免人氣文章破版
+  @media (max-width: $breakpoint-tablet) {
+    width: 48%;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+
+  // 圖片樣式
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+  }
+
+  // 標籤區域
+  .tag {
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    font-size: 24px;
+    font-weight: 500;
+
+    a {
+      text-decoration: none;
+      margin-right: 5px;
+
+      &.popular-tag {
+        display: inline-block;
+        background-color: $primary-color;
+        color: $white;
+        padding: 6px 12px;
+        border-radius: $border-radius;
+        font-size: $base-font-size;
+        font-weight: 700;
+      }
+    }
+  }
+
+  // 標題
+  h3 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  // 摘要文字
+  .excerpt {
+    color: $text-gray;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 16px;
+  }
+
+  // 按鈕樣式
+  .btn {
+    display: inline-block;
+    width: auto;
+
+    a {
+      display: block;
+      color: $text-gray;
+      text-decoration: none;
+      padding: 8px 16px;
+      border: $border-black 1px solid;
+      border-radius: $border-radius;
+
+      &:hover {
+        color: $white;
+        background: $text-gray;
+      }
+    }
+  }
+}
