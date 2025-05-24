@@ -1,0 +1,20 @@
+{
+  "name": "hexschool-final-project",
+  "version": "1.0.0",
+  "description": "hexschool-final-project",
+  "scripts": {
+    "scss:build": "sass src/style.scss dist/style.css",
+    "scss:watch": "sass src/style.scss dist/style.css --watch",
+    "scss:build-compressed": "sass src/style.scss dist/style.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.77.8"
+  },
+  "keywords": [
+    "scss",
+    "blog",
+    "responsive"
+  ],
+  "author": "linporu",
+  "license": "MIT"
+}
