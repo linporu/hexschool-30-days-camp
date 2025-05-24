@@ -1,0 +1,21 @@
+// ===== 容器佈局 =====
+@use "variables" as *;
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  max-width: $max-width; 
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+// ===== 部落格清單佈局 =====
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
