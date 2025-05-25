@@ -29,7 +29,6 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // 使用現代 Sass API
         api: "modern",
       },
     },

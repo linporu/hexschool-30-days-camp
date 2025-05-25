@@ -1,6 +1,5 @@
-import type { BlogItem } from '../types.js'
+import type { BlogItem } from "../types.js";
 
-// 部落格資料
 export const blogData: BlogItem[] = [
   {
     image:
@@ -62,4 +61,4 @@ export const blogData: BlogItem[] = [
     excerpt:
       "許多前端開發者對 Vue 一直情有獨鍾，因為它易上手又靈活。隨著 Vue3 上線，Composition API 的導入更是大大強化",
   },
-]
+];
