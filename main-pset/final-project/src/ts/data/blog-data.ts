@@ -1,4 +1,7 @@
-const blogData = [
+import type { BlogItem } from '../types.js'
+
+// 部落格資料
+export const blogData: BlogItem[] = [
   {
     image:
       "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo4.png?raw=true",
@@ -59,33 +62,4 @@ const blogData = [
     excerpt:
       "許多前端開發者對 Vue 一直情有獨鍾，因為它易上手又靈活。隨著 Vue3 上線，Composition API 的導入更是大大強化",
   },
-];
-
-document.addEventListener("DOMContentLoaded", function () {
-  const blogList = document.querySelector(".blog-list");
-
-  blogData.forEach((blog) => {
-    const tagsHtml = blog.tags.map((tag) => `<a href="#">${tag}</a>`).join("");
-
-    const popularTagHtml = blog.isPopular
-      ? `<a href="#" class="popular-tag">人氣文章</a>`
-      : "";
-
-    const blogItem = document.createElement("li");
-    blogItem.className = "blog-item";
-
-    blogItem.innerHTML = `
-      <img src="${blog.image}" alt="${blog.title}" loading="lazy" />
-      <p>${blog.date}</p>
-      <div class="tag">
-        ${tagsHtml}
-        ${popularTagHtml}
-      </div>
-      <h3>${blog.title}</h3>
-      <p class="excerpt">${blog.excerpt}</p>
-      <div class="btn"><a href="">閱讀內文</a></div>
-    `;
-
-    blogList.appendChild(blogItem);
-  });
-});
+]
