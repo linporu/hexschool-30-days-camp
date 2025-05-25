@@ -1,5 +1,6 @@
-import { BlogRenderer } from "./blog-renderer.js";
-import { blogData } from "./data/blog-data.js";
+import "../scss/style.scss";
+import { BlogRenderer } from "./blog-renderer";
+import { blogData } from "./data/blog-data";
 
 /**
  * 應用程式初始化函數
