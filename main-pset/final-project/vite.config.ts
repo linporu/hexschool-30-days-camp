@@ -10,7 +10,9 @@ export default defineConfig({
     sourcemap: true,
     rollupOptions: {
       input: {
+        index: resolve(__dirname, "index.html"),
         blog: resolve(__dirname, "blog.html"),
+        "blog-detail": resolve(__dirname, "blog-detail.html"),
       },
       output: {
         entryFileNames: "js/[name].[hash].js",
