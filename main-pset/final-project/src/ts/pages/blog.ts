@@ -1,15 +1,12 @@
 import "../../scss/style.scss";
-import { BlogListRenderer } from "../blog-list-renderer";
-import { blogData } from "../data/blog-data";
+import { BlogListRenderer } from "../components/blog-list";
+import { blogItemData } from "../data/blog-data";
 
 function init(): void {
+  // Render blog list
   const blogListRenderer = new BlogListRenderer();
-
-  if (!blogListRenderer.isReady()) {
-    return;
-  }
-
-  blogListRenderer.render(blogData);
+  const blogListElement = blogListRenderer.render(blogItemData);
+  document.querySelector(".main-content")?.appendChild(blogListElement);
 }
 
 /**
