@@ -1,17 +1,16 @@
-// ===== 基礎重置與設定 =====
 @use "variables" as *;
 
 body {
   font-family: $font-family;
 }
 
-// 預防圖片超出容器
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-// 連結基本樣式重置
+// Hyperlinks without underscore
 a {
   text-decoration: none;
   color: inherit;
