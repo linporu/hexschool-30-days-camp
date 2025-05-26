@@ -30,7 +30,7 @@ export class BlogListRenderer {
     blogItem.className = "blog-item";
 
     blogItem.innerHTML = `
-      <img src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
+      <img class="feat-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
       <p>${blogItemData.date}</p>
       <div class="tag">
         ${tagsHtml}
