@@ -1,5 +1,5 @@
 import "../../scss/style.scss";
-import { BlogListRenderer } from "../blog-renderer";
+import { BlogListRenderer } from "../blog-list-renderer";
 import { blogData } from "../data/blog-data";
 
 function init(): void {
