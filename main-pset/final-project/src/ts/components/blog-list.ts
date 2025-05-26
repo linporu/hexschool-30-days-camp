@@ -2,31 +2,25 @@ import type { BlogItem } from "../types.js";
 
 /**
  * Blog List Renderer Class
- * Responsible for rendering blog data to the DOM
+ * 負責產生完整的部落格列表 HTML 元素
  */
 export class BlogListRenderer {
-  private blogList: HTMLUListElement | null;
-
-  constructor(selector: string = ".blog-list") {
-    this.blogList = document.querySelector(selector);
-  }
-
   /**
-   * Creates HTML string for tags
+   * 建立標籤的 HTML 字串
    */
   private createTagsHtml(tags: string[]): string {
     return tags.map((tag: string): string => `<a href="#">${tag}</a>`).join("");
   }
 
   /**
-   * Creates HTML string for popular tag
+   * 建立人氣標籤的 HTML 字串
    */
   private createPopularTagHtml(isPopular: boolean): string {
     return isPopular ? `<a href="#" class="popular-tag">人氣文章</a>` : "";
   }
 
   /**
-   * Creates a single blog item element
+   * 建立單一部落格項目元素
    */
   private createBlogItemElement(blogItemData: BlogItem): HTMLLIElement {
     const tagsHtml = this.createTagsHtml(blogItemData.tags);
@@ -51,15 +45,11 @@ export class BlogListRenderer {
   }
 
   /**
-   * Renders the blog list
+   * 渲染完整的部落格列表，回傳 HTMLUListElement
    */
-  public render(blogItemData: BlogItem[]): void {
-    if (!this.blogList) {
-      console.error("blog-list element not found");
-      return;
-    }
-
-    this.blogList.innerHTML = "";
+  public render(blogItemData: BlogItem[]): HTMLUListElement {
+    const blogList: HTMLUListElement = document.createElement("ul");
+    blogList.className = "blog-list";
 
     const fragment = document.createDocumentFragment();
 
@@ -68,13 +58,8 @@ export class BlogListRenderer {
       fragment.appendChild(blogItem);
     });
 
-    this.blogList.appendChild(fragment);
-  }
+    blogList.appendChild(fragment);
 
-  /**
-   * Checks if the target container is found
-   */
-  public isReady(): boolean {
-    return this.blogList !== null;
+    return blogList;
   }
 }
