@@ -51,14 +51,10 @@ export class BlogListRenderer {
     const blogList: HTMLUListElement = document.createElement("ul");
     blogList.className = "blog-list";
 
-    const fragment = document.createDocumentFragment();
-
     blogItemData.forEach((blog: BlogItem): void => {
       const blogItem = this.createBlogItemElement(blog);
-      fragment.appendChild(blogItem);
+      blogList.appendChild(blogItem);
     });
-
-    blogList.appendChild(fragment);
 
     return blogList;
   }
