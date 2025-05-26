@@ -1,6 +1,6 @@
-import "../scss/style.scss";
-import { BlogListRenderer } from "./blog-renderer";
-import { blogData } from "./data/blog-data";
+import "../../scss/style.scss";
+import { BlogListRenderer } from "../blog-renderer";
+import { blogData } from "../data/blog-data";
 
 function init(): void {
   const blogListRenderer = new BlogListRenderer();
