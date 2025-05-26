@@ -1,8 +1,6 @@
-// ===== 主樣式入口檔案 (使用 @use 全域載入) =====
-// 順序很重要：變數 → 重置 → 基底 → 佈局 → 元件
-
 @use "variables";
 @use "reset";
 @use "base";
 @use "layout";
+@use "components";
 @use "blog";

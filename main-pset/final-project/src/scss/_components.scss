@@ -1,0 +1,28 @@
+@use "variables" as *;
+
+.nav {
+  &-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+  }
+  &-item {
+    display: inline-block;
+    height: 42px;
+    color: black;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: $line-height;
+    padding: 20px;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
