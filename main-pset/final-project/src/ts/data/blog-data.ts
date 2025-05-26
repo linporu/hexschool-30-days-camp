@@ -1,6 +1,6 @@
 import type { BlogItem } from "../types.js";
 
-export const blogData: BlogItem[] = [
+export const blogItemData: BlogItem[] = [
   {
     image:
       "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo4.png?raw=true",

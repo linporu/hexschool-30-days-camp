@@ -1,6 +1,6 @@
 import "../../scss/style.scss";
 import { BlogListRenderer } from "../blog-list-renderer";
-import { blogData } from "../data/blog-data";
+import { blogItemData } from "../data/blog-data";
 
 function init(): void {
   const blogListRenderer = new BlogListRenderer();
@@ -9,7 +9,7 @@ function init(): void {
     return;
   }
 
-  blogListRenderer.render(blogData);
+  blogListRenderer.render(blogItemData);
 }
 
 /**

@@ -30,22 +30,22 @@ export class BlogListRenderer {
   /**
    * Creates a single blog item element
    */
-  private createBlogItemElement(blog: BlogItem): HTMLLIElement {
-    const tagsHtml = this.createTagsHtml(blog.tags);
-    const popularTagHtml = this.createPopularTagHtml(blog.isPopular);
+  private createBlogItemElement(blogItemData: BlogItem): HTMLLIElement {
+    const tagsHtml = this.createTagsHtml(blogItemData.tags);
+    const popularTagHtml = this.createPopularTagHtml(blogItemData.isPopular);
 
     const blogItem: HTMLLIElement = document.createElement("li");
     blogItem.className = "blog-item";
 
     blogItem.innerHTML = `
-      <img src="${blog.image}" alt="${blog.title}" loading="lazy" />
-      <p>${blog.date}</p>
+      <img src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
+      <p>${blogItemData.date}</p>
       <div class="tag">
         ${tagsHtml}
         ${popularTagHtml}
       </div>
-      <h3>${blog.title}</h3>
-      <p class="excerpt">${blog.excerpt}</p>
+      <h3>${blogItemData.title}</h3>
+      <p class="excerpt">${blogItemData.excerpt}</p>
       <div class="btn"><a href="">Read More</a></div>
     `;
 
@@ -55,7 +55,7 @@ export class BlogListRenderer {
   /**
    * Renders the blog list
    */
-  public render(blogData: BlogItem[]): void {
+  public render(blogItemData: BlogItem[]): void {
     if (!this.blogList) {
       console.error("blog-list element not found");
       return;
@@ -65,7 +65,7 @@ export class BlogListRenderer {
 
     const fragment = document.createDocumentFragment();
 
-    blogData.forEach((blog: BlogItem): void => {
+    blogItemData.forEach((blog: BlogItem): void => {
       const blogItem = this.createBlogItemElement(blog);
       fragment.appendChild(blogItem);
     });
