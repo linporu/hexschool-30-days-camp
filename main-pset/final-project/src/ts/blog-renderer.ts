@@ -4,7 +4,7 @@ import type { BlogItem } from './types.js'
  * 部落格渲染器類別
  * 負責將部落格資料渲染到 DOM 中
  */
-export class BlogRenderer {
+export class BlogListRenderer {
   private blogList: HTMLUListElement | null
 
   constructor() {
