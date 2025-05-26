@@ -7,19 +7,11 @@
 }
 
 .site-header {
-  max-width: $max-width;
-  display: flex;
-  justify-content: center;
+  flex: 1;
 }
 
 .main-content {
-  max-width: $max-width;
-  display: flex;
-  justify-content: center;
+  flex: 1;
 }
 
-.blog-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+
