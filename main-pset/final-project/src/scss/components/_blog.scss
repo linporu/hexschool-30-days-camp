@@ -1,5 +1,10 @@
-// ===== 部落格項目元件 =====
-@use "variables" as *;
+@use "../variables" as *;
+
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 .blog-item {
   width: 32%;
@@ -7,7 +12,7 @@
   line-height: $line-height;
   margin-bottom: 40px;
 
-  // 響應式設計 - 避免人氣文章破版
+  // 避免人氣文章破版
   @media (max-width: $breakpoint-tablet) {
     width: 48%;
   }
@@ -16,7 +21,6 @@
     width: 100%;
   }
 
-  // 圖片樣式
   img {
     display: block;
     width: 100%;
@@ -24,7 +28,6 @@
     margin-bottom: 16px;
   }
 
-  // 標籤區域
   .tag {
     display: flex;
     align-items: center;
@@ -33,7 +36,6 @@
     font-weight: 500;
 
     a {
-      text-decoration: none;
       margin-right: 5px;
 
       &.popular-tag {
@@ -48,14 +50,12 @@
     }
   }
 
-  // 標題
   h3 {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
   }
 
-  // 摘要文字
   .excerpt {
     color: $text-gray;
     display: -webkit-box;
@@ -66,7 +66,6 @@
     margin-bottom: 16px;
   }
 
-  // 按鈕樣式
   .btn {
     display: inline-block;
     width: auto;

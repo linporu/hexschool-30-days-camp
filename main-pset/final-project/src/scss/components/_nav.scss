@@ -1,4 +1,4 @@
-@use "variables" as *;
+@use "../variables" as *;
 
 .nav {
   &-menu {
@@ -19,10 +19,4 @@
       color: $primary-color;
     }
   }
-}
-
-.blog-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
