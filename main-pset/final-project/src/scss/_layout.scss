@@ -1,9 +1,9 @@
-// ===== 容器佈局 =====
 @use "variables" as *;
 
-.wrap {
+.page-wrapper {
+  min-height: 100vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .main-content {
@@ -13,7 +13,6 @@
   margin: 0 10px;
 }
 
-// ===== 部落格清單佈局 =====
 .blog-list {
   display: flex;
   justify-content: space-between;
