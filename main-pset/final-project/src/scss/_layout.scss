@@ -6,11 +6,16 @@
   flex-direction: column;
 }
 
+.site-header {
+  max-width: $max-width;
+  display: flex;
+  justify-content: center;
+}
+
 .main-content {
   max-width: $max-width;
   display: flex;
   justify-content: center;
-  margin: 0 10px;
 }
 
 .blog-list {
