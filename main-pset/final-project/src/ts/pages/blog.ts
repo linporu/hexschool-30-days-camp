@@ -3,6 +3,7 @@ import { BlogListRenderer } from "../blog-list-renderer";
 import { blogItemData } from "../data/blog-data";
 
 function init(): void {
+  // Render blog list
   const blogListRenderer = new BlogListRenderer();
 
   if (!blogListRenderer.isReady()) {

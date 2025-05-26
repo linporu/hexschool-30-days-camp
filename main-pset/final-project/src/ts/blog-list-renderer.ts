@@ -7,8 +7,8 @@ import type { BlogItem } from "./types.js";
 export class BlogListRenderer {
   private blogList: HTMLUListElement | null;
 
-  constructor() {
-    this.blogList = document.querySelector(".blog-list");
+  constructor(selector: string = ".blog-list") {
+    this.blogList = document.querySelector(selector);
   }
 
   /**
