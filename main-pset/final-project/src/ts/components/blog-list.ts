@@ -1,4 +1,4 @@
-import type { BlogItem } from "./types.js";
+import type { BlogItem } from "../types.js";
 
 /**
  * Blog List Renderer Class
@@ -22,9 +22,7 @@ export class BlogListRenderer {
    * Creates HTML string for popular tag
    */
   private createPopularTagHtml(isPopular: boolean): string {
-    return isPopular
-      ? `<a href="#" class="popular-tag">Popular Article</a>`
-      : "";
+    return isPopular ? `<a href="#" class="popular-tag">人氣文章</a>` : "";
   }
 
   /**
@@ -46,7 +44,7 @@ export class BlogListRenderer {
       </div>
       <h3>${blogItemData.title}</h3>
       <p class="excerpt">${blogItemData.excerpt}</p>
-      <div class="btn"><a href="">Read More</a></div>
+      <div class="btn"><a href="">閱讀更多</a></div>
     `;
 
     return blogItem;
