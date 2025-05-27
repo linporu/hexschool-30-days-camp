@@ -1,17 +1,1 @@
 @use "variables" as *;
-
-.page-wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-.site-header {
-  flex: 1;
-}
-
-.main-content {
-  flex: 1;
-}
-
-
