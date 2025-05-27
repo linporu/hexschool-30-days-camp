@@ -21,25 +21,24 @@
     margin-bottom: 16px;
   }
 
-  .tag {
+  .tag-container {
     display: flex;
     align-items: center;
+    gap: 5px;
+  }
+
+  .hashtag {
     color: $primary-color;
     font-size: 24px;
     font-weight: 500;
+  }
 
-    a {
-      margin-right: 5px;
-
-      &.popular-tag {
-        display: inline-block;
-        background-color: $primary-color;
-        color: $white;
-        padding: 6px 12px;
-        border-radius: $border-radius;
-        font-weight: 700;
-      }
-    }
+  .popular-tag {
+    background-color: $primary-color;
+    color: $white;
+    padding: 6px 12px;
+    border-radius: $border-radius;
+    font-weight: 700;
   }
 
   .card-title {

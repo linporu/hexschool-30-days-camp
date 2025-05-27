@@ -9,7 +9,9 @@ export class BlogListRenderer {
    * 建立標籤的 HTML 字串
    */
   private createTagsHtml(tags: string[]): string {
-    return tags.map((tag: string): string => `<a href="#">${tag}</a>`).join("");
+    return tags
+      .map((tag: string): string => `<a href="#" class="hashtag">${tag}</a>`)
+      .join("");
   }
 
   /**
@@ -32,7 +34,7 @@ export class BlogListRenderer {
     blogItem.innerHTML = `
       <img class="card-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
       <p>${blogItemData.date}</p>
-      <div class="tag">
+      <div class="tag-container">
         ${tagsHtml}
         ${popularTagHtml}
       </div>
