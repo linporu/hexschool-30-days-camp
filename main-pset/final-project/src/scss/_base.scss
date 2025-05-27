@@ -24,8 +24,16 @@ a {
 
 .site-header {
   flex: 1;
+  background: $background-light;
 }
 
 .main-content {
   flex: 1;
+}
+
+.site-footer {
+  flex: 1;
+  text-align: center;
+  padding: 24px 0;
+  gap: 10px;
 }
