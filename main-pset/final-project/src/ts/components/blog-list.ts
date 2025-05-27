@@ -9,7 +9,9 @@ export class BlogListRenderer {
    * 建立標籤的 HTML 字串
    */
   private createTagsHtml(tags: string[]): string {
-    return tags.map((tag: string): string => `<a href="#">${tag}</a>`).join("");
+    return tags
+      .map((tag: string): string => `<a href="#" class="hashtag">${tag}</a>`)
+      .join("");
   }
 
   /**
@@ -27,18 +29,18 @@ export class BlogListRenderer {
     const popularTagHtml = this.createPopularTagHtml(blogItemData.isPopular);
 
     const blogItem: HTMLLIElement = document.createElement("li");
-    blogItem.className = "blog-item";
+    blogItem.className = "card";
 
     blogItem.innerHTML = `
-      <img class="feat-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
-      <p>${blogItemData.date}</p>
-      <div class="tag">
+      <img class="card-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
+      <time>${blogItemData.date}</time>
+      <div class="tag-container">
         ${tagsHtml}
         ${popularTagHtml}
       </div>
-      <h3>${blogItemData.title}</h3>
-      <p class="excerpt">${blogItemData.excerpt}</p>
-      <div class="btn"><a href="">閱讀更多</a></div>
+      <h3 class="card-title">${blogItemData.title}</h3>
+      <p class="card-excerpt">${blogItemData.excerpt}</p>
+      <a href="#" class="btn-read-more">閱讀更多</a>
     `;
 
     return blogItem;
@@ -49,7 +51,7 @@ export class BlogListRenderer {
    */
   public render(blogItemData: BlogItem[]): HTMLUListElement {
     const blogList: HTMLUListElement = document.createElement("ul");
-    blogList.className = "blog-list";
+    blogList.className = "card-container";
 
     blogItemData.forEach((blog: BlogItem): void => {
       const blogItem = this.createBlogItemElement(blog);
