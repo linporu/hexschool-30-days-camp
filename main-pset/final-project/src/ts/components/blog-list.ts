@@ -29,18 +29,18 @@ export class BlogListRenderer {
     const popularTagHtml = this.createPopularTagHtml(blogItemData.isPopular);
 
     const blogItem: HTMLLIElement = document.createElement("li");
-    blogItem.className = "l-card";
+    blogItem.className = "card";
 
     blogItem.innerHTML = `
       <img class="card-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
-      <p>${blogItemData.date}</p>
+      <time>${blogItemData.date}</time>
       <div class="tag-container">
         ${tagsHtml}
         ${popularTagHtml}
       </div>
       <h3 class="card-title">${blogItemData.title}</h3>
       <p class="card-excerpt">${blogItemData.excerpt}</p>
-      <div class="btn"><a href="">閱讀更多</a></div>
+      <a href="#" class="btn-read-more">閱讀更多</a>
     `;
 
     return blogItem;
@@ -51,7 +51,7 @@ export class BlogListRenderer {
    */
   public render(blogItemData: BlogItem[]): HTMLUListElement {
     const blogList: HTMLUListElement = document.createElement("ul");
-    blogList.className = "blog-list";
+    blogList.className = "card-container";
 
     blogItemData.forEach((blog: BlogItem): void => {
       const blogItem = this.createBlogItemElement(blog);
