@@ -1,15 +1,14 @@
 @use "../variables" as *;
 
-.blog-list {
+.card-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
 
-.blog-item {
+.card {
   width: 32%;
-  font-size: $base-font-size;
-  line-height: $line-height;
+  line-height: $default-line-height;
   margin-bottom: 40px;
 
   // 避免人氣文章破版
@@ -21,42 +20,40 @@
     width: 100%;
   }
 
-  .feat-img {
+  .card-img {
     display: block;
     width: 100%;
     height: auto;
     margin-bottom: 16px;
   }
 
-  .tag {
+  .tag-container {
     display: flex;
     align-items: center;
+    gap: 5px;
+  }
+
+  .hashtag {
     color: $primary-color;
     font-size: 24px;
     font-weight: 500;
-
-    a {
-      margin-right: 5px;
-
-      &.popular-tag {
-        display: inline-block;
-        background-color: $primary-color;
-        color: $white;
-        padding: 6px 12px;
-        border-radius: $border-radius;
-        font-size: $base-font-size;
-        font-weight: 700;
-      }
-    }
   }
 
-  h3 {
+  .popular-tag {
+    background-color: $primary-color;
+    color: $white;
+    padding: 6px 12px;
+    border-radius: $border-radius;
+    font-weight: 700;
+  }
+
+  .card-title {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 8px;
   }
 
-  .excerpt {
+  .card-excerpt {
     color: $text-gray;
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -66,22 +63,17 @@
     margin-bottom: 16px;
   }
 
-  .btn {
+  .btn-read-more {
     display: inline-block;
-    width: auto;
+    color: $text-gray;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid $black;
+    border-radius: $border-radius;
 
-    a {
-      display: block;
-      color: $text-gray;
-      text-decoration: none;
-      padding: 8px 16px;
-      border: $border-black 1px solid;
-      border-radius: $border-radius;
-
-      &:hover {
-        color: $white;
-        background: $text-gray;
-      }
+    &:hover {
+      color: $white;
+      background: $text-gray;
     }
   }
 }
