@@ -27,17 +27,17 @@ export class BlogListRenderer {
     const popularTagHtml = this.createPopularTagHtml(blogItemData.isPopular);
 
     const blogItem: HTMLLIElement = document.createElement("li");
-    blogItem.className = "blog-item";
+    blogItem.className = "l-card";
 
     blogItem.innerHTML = `
-      <img class="feat-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
+      <img class="card-img" src="${blogItemData.image}" alt="${blogItemData.title}" loading="lazy" />
       <p>${blogItemData.date}</p>
       <div class="tag">
         ${tagsHtml}
         ${popularTagHtml}
       </div>
-      <h3>${blogItemData.title}</h3>
-      <p class="excerpt">${blogItemData.excerpt}</p>
+      <h3 class="card-title">${blogItemData.title}</h3>
+      <p class="card-excerpt">${blogItemData.excerpt}</p>
       <div class="btn"><a href="">閱讀更多</a></div>
     `;
 
