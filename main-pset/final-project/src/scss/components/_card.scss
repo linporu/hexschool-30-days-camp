@@ -2,7 +2,7 @@
 @use "../mixin" as *;
 
 .card-container {
-  @include container();
+  @include container;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
