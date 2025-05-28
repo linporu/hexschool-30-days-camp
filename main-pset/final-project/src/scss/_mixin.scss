@@ -1,12 +1,17 @@
 @use "variables";
 
-@mixin container() {
+@mixin container {
   max-width: 1296px;
   padding: 0 10px;
 }
 
-@mixin flex-center() {
+@mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin image-cover {
+  vertical-align: middle;
+  object-fit: cover;
 }

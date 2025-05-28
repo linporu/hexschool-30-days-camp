@@ -1,0 +1,57 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.hero-section {
+  display: flex;
+  @media (max-width: $breakpoint-mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.hero-image {
+  width: 50%;
+  @include image-cover;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.hero-content-container {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  background-image: url($hero-content-background-url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  padding: 0 80px;
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+    padding: 24px;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  gap: 12px;
+}
+
+.hero-content-title {
+  font-size: 120px;
+  font-weight: 900;
+  color: $primary-color;
+  @media (max-width: $breakpoint-tablet) {
+    font-size: 80px;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    font-size: 52px;
+  }
+}
+
+.hero-content-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: $primary-color;
+}
