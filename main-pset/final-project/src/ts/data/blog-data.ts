@@ -61,4 +61,52 @@ export const blogItemData: BlogItem[] = [
     excerpt:
       "許多前端開發者對 Vue 一直情有獨鍾，因為它易上手又靈活。隨著 Vue3 上線，Composition API 的導入更是大大強化",
   },
+  {
+    image:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo9.png?raw=true",
+    date: "2024/05/04",
+    tags: ["#Git", "#協作流程"],
+    isPopular: false,
+    title: "Git 與版本控制：前端協作的必修課",
+    excerpt:
+      "當你從一人開發晉升到多人合作，版本控制的好壞往往決定了專案的順暢度。Git 不僅能記錄程式碼變動，更能確保…",
+  },
+  {
+    image:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo7.png?raw=true",
+    date: "2024/05/01",
+    tags: ["#SEO", "#網頁曝光"],
+    isPopular: false,
+    title: "SEO 與前端最佳實踐：讓搜尋引擎看見你的網站",
+    excerpt:
+      "即使你的網站擁有優美的介面與強大的功能，如果在搜尋引擎上找不到它，那就形同虛設。身為前端工程師，瞭解…",
+  },
+  {
+    image:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo8.png?raw=true",
+    date: "2024/02/17",
+    tags: ["#專案維護", "#自動化測試"],
+    isPopular: false,
+    title: "穩定前端環境的秘訣：依賴管理與自動化流程",
+    excerpt: "前端世界日新月異，第三方套件與工具異新更新，一個不…",
+  },
+  {
+    image:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo11.png?raw=true",
+    date: "2024/02/17",
+    tags: ["#TypeScript", "#程式設計"],
+    isPopular: false,
+    title: "TypeScript 快速上手：強化前端程式碼的安全與可讀性",
+    excerpt: "許多前端開發者在成長過程中都會面臨團隊協助語言帶來的錯…",
+  },
+  {
+    image:
+      "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo10.png?raw=true",
+    date: "2024/02/07",
+    tags: ["#測試框架", "#品質保證"],
+    isPopular: false,
+    title: "掌握前端測試：從單元測試到端對端測試的完整攻略",
+    excerpt:
+      "寫程式容易，但要確保程式碼在多種情境、裝置都能正常運行卻沒那麼簡單了。透過「測試」便成了維持程式品質的關…",
+  },
 ];
