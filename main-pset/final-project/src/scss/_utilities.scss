@@ -1,6 +1,0 @@
-@use "variables" as *;
-@use "mixin" as *;
-
-.border {
-  border-width: 1px $secondary-color;
-}
