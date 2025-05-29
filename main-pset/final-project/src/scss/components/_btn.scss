@@ -1,6 +1,20 @@
 @use "../variables" as *;
 @use "../mixin" as *;
 
+.btn-read-more {
+  display: inline-block;
+  color: $text-gray;
+  padding: 8px 16px;
+  border: 1px solid $black;
+  border-radius: $border-radius;
+  align-self: flex-start;
+
+  &:hover {
+    color: $white;
+    background: $text-gray;
+  }
+}
+
 .btn-social-icon {
   width: 44px;
   height: 44px;
