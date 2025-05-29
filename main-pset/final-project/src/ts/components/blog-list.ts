@@ -10,7 +10,7 @@ export class BlogListRenderer {
    */
   private createTagsHtml(tags: string[]): string {
     return tags
-      .map((tag: string): string => `<a href="#" class="hashtag">${tag}</a>`)
+      .map((tag: string): string => `<a href="#" class="tag-hashtag">${tag}</a>`)
       .join("");
   }
 
@@ -18,7 +18,7 @@ export class BlogListRenderer {
    * 建立人氣標籤的 HTML 字串
    */
   private createPopularTagHtml(isPopular: boolean): string {
-    return isPopular ? `<a href="#" class="popular-tag">人氣文章</a>` : "";
+    return isPopular ? `<a href="#" class="tag">人氣文章</a>` : "";
   }
 
   /**
