@@ -4,7 +4,7 @@ import { resolve } from "path";
 export default defineConfig({
   base: '/hexschool-30-days-camp/',
   root: ".",
-  publicDir: "public",
+  publicDir: "src/public",
   build: {
     outDir: "dist",
     emptyOutDir: true,
