@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 
 export default defineConfig({
+  base: '/hexschool-30-days-camp/',
   root: ".",
   publicDir: "public",
   build: {
