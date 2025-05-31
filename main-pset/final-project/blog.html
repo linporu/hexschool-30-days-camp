@@ -58,8 +58,24 @@
       </section>
 
       <main class="main-content">
-        <div class="search-bar"></div>
-        <div class="blog-list"></div>
+        <div class="main-content-container">
+          <form class="search-bar" role="search">
+            <button type="submit" class="btn-search">
+              <img
+                src="/search-icon.svg"
+                alt="search-icon"
+                width="24"
+                height="24"
+              />
+            </button>
+            <input
+              type="search"
+              class="search-input"
+              placeholder="搜尋你感興趣的文章"
+            />
+          </form>
+          <div class="blog-list"></div>
+        </div>
       </main>
 
       <footer class="site-footer">

@@ -1,0 +1,20 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.search-bar {
+  display: flex;
+  max-width: 416px;
+  padding: 16px;
+  border: 1px solid $gray;
+  border-radius: $border-radius;
+  gap: 8px;
+}
+
+.search-input {
+  width: auto;
+  color: $gray;
+}
+
+.btn-search {
+  @include flex-center;
+}
