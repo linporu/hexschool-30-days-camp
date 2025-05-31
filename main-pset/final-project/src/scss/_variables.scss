@@ -1,20 +1,21 @@
-// ===== 顏色變數 =====
+// ===== Color Variables =====
 $primary-color: #0027d5;
 $secondary-color: #6c757d;
 $background-light: #fbfbfb;
+$border-color: #000000;
 $black: #000000;
-$gray: #4b4b4b;
+$text-gray: #4b4b4b;
 $white: #ffffff;
 
-// ===== 字型變數 =====
+// ===== Font Variables =====
 $default-font: "noto sans tc";
 $default-line-height: 1.5;
 
-// ===== 尺寸變數 =====
+// ===== Size Variables =====
 $border-radius: 40px;
 $max-width: 1280px;
 
-// ===== 響應式斷點 =====
+// ===== Responsive Breakpoints =====
 $breakpoint-tablet: 1106px;
 $breakpoint-mobile: 768px;
 

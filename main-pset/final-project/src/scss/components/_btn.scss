@@ -3,14 +3,14 @@
 
 .btn-read-more {
   display: inline-block;
-  color: $gray;
+  color: $text-gray;
   padding: 8px 16px;
-  border: 1px solid $black;
+  border: 1px solid $border-color;
   border-radius: $border-radius;
 
   &:hover {
-    color: $white;
-    background: $gray;
+    @include lighten-text($text-gray);
+    @include lighten-border($border-color);
   }
 }
 

@@ -14,3 +14,11 @@
   vertical-align: middle;
   object-fit: cover;
 }
+
+@mixin lighten-text($color, $amount: 30%) {
+  color: lighten($color, $amount);
+}
+
+@mixin lighten-border($color, $width: 1px, $style: solid, $amount: 50%) {
+  border: $width $style lighten($color, $amount);
+}
