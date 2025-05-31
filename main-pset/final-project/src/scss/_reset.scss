@@ -132,3 +132,15 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+
+/* 隱藏 Webkit 瀏覽器 (Chrome, Safari) 的清除按鈕 */
+.search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* 隱藏搜尋圖示 */
+.search-input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
