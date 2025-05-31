@@ -6,7 +6,7 @@ function init(): void {
   // Render blog list
   const blogListRenderer = new BlogListRenderer();
   const blogListElement = blogListRenderer.render(blogItemData);
-  document.querySelector(".main-content")?.appendChild(blogListElement);
+  document.querySelector(".blog-list")?.appendChild(blogListElement);
 }
 
 /**

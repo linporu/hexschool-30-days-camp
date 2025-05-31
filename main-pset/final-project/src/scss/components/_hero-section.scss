@@ -3,6 +3,7 @@
 
 .hero-section {
   display: flex;
+  background: $background-light;
 
   @media (max-width: $breakpoint-mobile) {
     flex-wrap: wrap;
