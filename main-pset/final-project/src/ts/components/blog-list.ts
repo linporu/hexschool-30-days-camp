@@ -2,27 +2,29 @@ import type { BlogItem } from "../types.js";
 
 /**
  * Blog List Renderer Class
- * 負責產生完整的部落格列表 HTML 元素
+ * Generates the complete blog list HTML elements
  */
 export class BlogListRenderer {
   /**
-   * 建立標籤的 HTML 字串
+   * Creates the HTML string for tags
    */
   private createTagsHtml(tags: string[]): string {
     return tags
-      .map((tag: string): string => `<a href="#" class="tag-hashtag">${tag}</a>`)
+      .map(
+        (tag: string): string => `<a href="#" class="tag-hashtag">${tag}</a>`
+      )
       .join("");
   }
 
   /**
-   * 建立人氣標籤的 HTML 字串
+   * Creates the HTML string for the popular tag
    */
   private createPopularTagHtml(isPopular: boolean): string {
     return isPopular ? `<a href="#" class="tag">人氣文章</a>` : "";
   }
 
   /**
-   * 建立單一部落格項目元素
+   * Creates a single blog item element
    */
   private createBlogItemElement(blogItemData: BlogItem): HTMLLIElement {
     const tagsHtml = this.createTagsHtml(blogItemData.tags);
@@ -47,7 +49,7 @@ export class BlogListRenderer {
   }
 
   /**
-   * 渲染完整的部落格列表，回傳 HTMLUListElement
+   * Renders the complete blog list and returns an HTMLUListElement
    */
   public render(blogItemData: BlogItem[]): HTMLUListElement {
     const blogList: HTMLUListElement = document.createElement("ul");
