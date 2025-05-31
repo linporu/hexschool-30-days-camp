@@ -1,4 +1,4 @@
-// 部落格文章的型別定義
+// Type definition for a blog post
 export interface BlogItem {
   image: string;
   date: string;
@@ -8,5 +8,5 @@ export interface BlogItem {
   excerpt: string;
 }
 
-// DOM 元素型別
+// DOM element types
 export interface BlogListElement extends HTMLUListElement {}

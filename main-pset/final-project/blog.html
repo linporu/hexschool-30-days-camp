@@ -11,20 +11,21 @@
   </head>
   <body>
     <div class="page-wrapper">
+      <!-- Header -->
       <header class="site-header">
-        <nav class="nav">
-          <ul class="nav-menu">
-            <a href="index.html"><li class="nav-item">首頁</li></a>
-            <a href="blog.html"><li class="nav-item">部落格</li></a>
-          </ul>
-        </nav>
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="index.html">首頁</a></li>
+          <li class="nav-item"><a href="blog.html">部落格</a></li>
+        </ul>
       </header>
 
+      <!-- Hero section -->
       <section class="hero-section">
         <img
           class="hero-image"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true"
           alt="Profile picture"
+          loading="lazy"
         />
         <div class="hero-content-container">
           <div class="hero-content">
@@ -34,11 +35,13 @@
         </div>
       </section>
 
+      <!-- Latest article -->
       <section class="hero-section-border">
         <img
           class="hero-image"
           src="https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/About%20Section.png?raw=true"
           alt="Latest article featured hero-image"
+          loading="lazy"
         />
         <div class="latest-article-content-container">
           <div class="latest-article-content">
@@ -59,6 +62,7 @@
 
       <main class="main-content">
         <div class="main-content-container">
+          <!-- Search bar -->
           <form class="search-bar" role="search">
             <button type="submit" class="btn-search">
               <img
@@ -75,9 +79,11 @@
             />
           </form>
 
+          <!-- Blog list rendered by JavaScript -->
           <div class="blog-list"></div>
 
-          <div class="pagination">
+          <!-- Pagination -->
+          <nav class="pagination">
             <ul class="pagination-container">
               <a href="">
                 <li class="pagination-item">
@@ -106,7 +112,7 @@
                 </li>
               </a>
             </ul>
-          </div>
+          </nav>
         </div>
       </main>
 
