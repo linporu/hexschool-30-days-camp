@@ -16,7 +16,13 @@
 
 .main-content {
   background: $background-light;
-  margin: 80 auto;
+  padding: 80px 0;
+}
+
+.main-content-container {
+  @include container;
+  margin: 0 auto;
+  padding: 0 10px;
 }
 
 .site-footer {
