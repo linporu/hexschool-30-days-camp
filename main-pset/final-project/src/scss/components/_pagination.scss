@@ -1,0 +1,36 @@
+@use "../variables" as *;
+@use "../mixin" as *;
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+  border-radius: $border-radius;
+  padding: 8px 20px;
+}
+
+.pagination-item {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  color: $black;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+.pagination-item-active {
+  @extend .pagination-item;
+  color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
