@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 body {
-  font-family: $default-font, sans-serif;
+  font-family: $font-family;
   line-height: $default-line-height;
 }
 
