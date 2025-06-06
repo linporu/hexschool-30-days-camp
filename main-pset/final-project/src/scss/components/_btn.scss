@@ -9,8 +9,9 @@
   border-radius: $border-radius;
 
   &:hover {
-    @include lighten-text($text-gray);
-    @include lighten-border($border-color);
+    color: $white;
+    border: 1px solid $primary-color;
+    background: $primary-color;
   }
 }
 
