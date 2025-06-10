@@ -33,23 +33,28 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: 'npm'
-          cache-dependency-path: './main-pset/final-project/package-lock.json'
+          cache: 'pnpm'
+          cache-dependency-path: './main-pset/final-project/pnpm-lock.yaml'
+          
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
           
       - name: Setup Pages
         uses: actions/configure-pages@v5
         
       - name: Install dependencies
         working-directory: ./main-pset/final-project
-        run: npm ci
+        run: pnpm install --frozen-lockfile
         
       - name: Type check
         working-directory: ./main-pset/final-project
-        run: npm run type-check
+        run: pnpm run type-check
         
       - name: Build project
         working-directory: ./main-pset/final-project
-        run: npm run build
+        run: pnpm run build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
